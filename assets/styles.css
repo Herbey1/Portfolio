@@ -238,6 +238,11 @@ body::before {
 
 @media (max-width: 960px) { .cv-toast { right: 4%; left: auto; } }
 
+/* Hide CV toast when printing (PDF export) */
+@media print {
+  #cv-toast, .cv-toast { display: none !important; }
+}
+
 /* CV styles (shared by cv.html) */
 .cv .cv-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .cv-sheet { border: 1px solid var(--border); background: var(--bg-elev); border-radius: 14px; padding: 18px; display: grid; gap: 16px; }
