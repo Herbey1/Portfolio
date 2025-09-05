@@ -30,10 +30,13 @@
         <span class="dot" aria-hidden="true"></span>
         <a href="index.html" class="brand-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</a>
       </div>
-      <nav class="nav">
-        <a href="index.html#projects" data-i18n="nav.projects">Proyectos</a>
-        <a href="index.html#about" data-i18n="nav.about">Sobre mí</a>
-        <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
+      <button id="nav-toggle" class="btn ghost nav-toggle" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">☰</button>
+      <nav class="nav" id="nav-menu" data-open="false">
+        <div class="nav-links">
+          <a href="index.html#projects" data-i18n="nav.projects">Proyectos</a>
+          <a href="index.html#about" data-i18n="nav.about">Sobre mí</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
+        </div>
         <div class="controls">
           <button id="lang-toggle" class="btn ghost" aria-label="Cambiar idioma">ES</button>
           <button id="theme-toggle" class="btn ghost" aria-label="Cambiar tema">🌙</button>

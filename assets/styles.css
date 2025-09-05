@@ -124,7 +124,10 @@ body::before {
 .nav a { color: var(--muted); text-decoration: none; font-weight: 600; transition: color var(--anim-fast) var(--ease-smooth); }
 .nav a:hover { color: var(--text); }
 .controls { display: flex; align-items: center; gap: 8px; }
-.nav-toggle { display: none; }
+.nav-toggle { display: none; transition: transform var(--anim-fast) var(--ease-smooth); transform-origin: 50% 50%; will-change: transform; }
+.nav-toggle.open { transform: rotate(90deg); }
+.nav-toggle:active { transform: scale(0.96); }
+.nav-toggle.open:active { transform: rotate(90deg) scale(0.96); }
 
 .btn { background: var(--accent); color: #0e0e0e; border: 1px solid transparent; padding: 8px 12px; border-radius: 10px; font-weight: 700; cursor: pointer; text-decoration: none; transition: transform var(--anim-fast) var(--ease-smooth), filter var(--anim-fast) var(--ease-smooth), background-color var(--anim-slow) var(--ease-smooth), color var(--anim-slow) var(--ease-smooth), border-color var(--anim-slow) var(--ease-smooth); }
 .btn:not(.ghost):hover { filter: brightness(1.05); transform: translateY(-1px); }

@@ -355,13 +355,24 @@ function initMobileNav() {
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav-menu');
   if (!toggle || !nav) return;
+  const lang = () => (localStorage.getItem('lang') || 'es');
+  const labelFor = (isOpen) => {
+    const l = lang();
+    return isOpen ? (l === 'es' ? 'Cerrar menú' : 'Close menu') : (l === 'es' ? 'Abrir menú' : 'Open menu');
+  };
   const close = () => {
     nav.setAttribute('data-open', 'false');
     toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', labelFor(false));
+    toggle.textContent = '☰';
+    toggle.classList.remove('open');
   };
   const open = () => {
     nav.setAttribute('data-open', 'true');
     toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', labelFor(true));
+    toggle.textContent = '✕';
+    toggle.classList.add('open');
   };
   toggle.addEventListener('click', () => {
     const opened = nav.getAttribute('data-open') === 'true';
@@ -375,6 +386,16 @@ function initMobileNav() {
   });
   // Close when clicking a link
   nav.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => close()));
+  // Ensure correct label on language change
+  document.addEventListener('click', (e) => {
+    // When language toggled, update aria-label text accordingly on next tick
+    if (e.target && e.target.id === 'lang-toggle') {
+      setTimeout(() => {
+        const opened = nav.getAttribute('data-open') === 'true';
+        toggle.setAttribute('aria-label', labelFor(opened));
+      }, 0);
+    }
+  });
 }
 
 function initCvToast() {
