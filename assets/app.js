@@ -347,7 +347,35 @@ document.addEventListener("DOMContentLoaded", () => {
   initCvToast();
   // Smooth anchors
   initSmoothAnchors();
+  // Mobile nav
+  initMobileNav();
 });
+
+function initMobileNav() {
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('nav-menu');
+  if (!toggle || !nav) return;
+  const close = () => {
+    nav.setAttribute('data-open', 'false');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  const open = () => {
+    nav.setAttribute('data-open', 'true');
+    toggle.setAttribute('aria-expanded', 'true');
+  };
+  toggle.addEventListener('click', () => {
+    const opened = nav.getAttribute('data-open') === 'true';
+    opened ? close() : open();
+  });
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (e.target === toggle) return;
+    if (nav.getAttribute('data-open') !== 'true') return;
+    if (!nav.contains(e.target)) close();
+  });
+  // Close when clicking a link
+  nav.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => close()));
+}
 
 function initCvToast() {
   // Do not render toast on the CV page
