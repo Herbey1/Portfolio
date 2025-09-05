@@ -1,0 +1,11 @@
+# Ignore local and heavy files from deploy
+.git
+.devcontainer
+.vscode
+requirements_extracted.txt
+Requisitos portfolio.docx
+Requisitos portfolio.pdf
+**/*.psd
+**/*.ai
+**/*.zip
+

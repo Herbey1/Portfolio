@@ -1,0 +1,37 @@
+{
+  "name": "Portfolio DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.LiveServer",
+        "ms-vscode.live-preview",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        "eamodio.gitlens",
+        "christian-kohler.path-intellisense",
+        "formulahendry.auto-rename-tag",
+        "ecmel.vscode-html-css",
+        "Zignd.html-css-class-completion",
+        "pranaygp.vscode-css-peek",
+        "stylelint.vscode-stylelint",
+        "naumovs.color-highlight",
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
+        "xabikos.JavaScriptSnippets",
+        "yzhang.markdown-all-in-one",
+        "yzane.markdown-pdf",
+        "shd101wyy.markdown-preview-enhanced",
+        "tomoki1207.pdf",
+        "webhint.vscode-webhint",
+        "deque-systems.vscode-axe-linter",
+        "jock.svg",
+        "kisstkondoros.vscode-gutter-preview",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-spanish",
+        "PKief.material-icon-theme"
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,63 @@
+Nombre / Rol
+Carlos Herbey Gámez Gaxiola
+ Estudiante de Ingeniería de Software y Tecnologías Emergentes
+ Tagline: “Explorando el desarrollo frontend y soñando con bases de datos y ciberseguridad”
+
+Bio
+Soy estudiante de la Universidad Autónoma de Baja California en la Facultad de Ciencias Químicas e Ingeniería. Me apasiona la programación, especialmente el desarrollo frontend, aunque también me interesa aprender más sobre bases de datos y ciberseguridad. Me gusta probar cosas nuevas, practicar voleibol y, en mis ratos libres, disfruto dibujar y pintar.
+
+Redes
+GitHub: github.com/Herbey1
+
+LinkedIn: linkedin.com/in/carlos-herbey-gamez-gaxiola-a1a771287
+
+Email personal: carlosherbey4@gmail.com
+
+Email institucional: carlos.gamez38@gmail.com
+
+Proyectos
+1. Sistema de Gestión de Comisiones Académicas (SGCA – UABC)
+Descripción:
+ Aplicación diseñada para automatizar y optimizar el proceso de solicitud y reporte de comisiones académicas en la FCQI de la UABC. Facilita el registro de usuarios, aprobación de solicitudes, carga de evidencias y generación de estadísticas.
+
+ Stack: Java, MySQL, UML, Swing (prototipo académico).
+ Links: https://github.com/Herbey1/ServicioP2 | Documento técnico (PDF) disponible.
+ Imagen: 
+
+
+
+2. EcoGestor
+Descripción:
+ Plataforma web para la gestión ambiental con sensores IoT. Incluye monitoreo de residuos, gateway de comunicación y una app móvil para ciudadanos. Permite centralizar información y fomentar la participación social.
+ Stack: React, TailwindCSS, Node.js, IoT (ESP32).
+ Links: https://github.com/Herbey1/EcoGestor | https://eco-gestor-4nsh5oejd-carlos-herbeys-projects.vercel.app/
+ Imagen: 
+
+
+
+
+3. Memoria Familiar (en desarrollo)
+Descripción:
+ Aplicación de IA que entrevista a personas mayores con preguntas amables para preservar sus historias de vida. Transcribe, organiza por etapas (“Infancia”, “Trabajo”, “Viajes”) y permite compartir recuerdos en familia. Proyecto pensado con potencial de patente.
+ Stack: React, Node.js, OpenAI API (planificado).
+ Links: En desarrollo
+ Imagen: (mockup por crear o placeholder temporal).
+
+4. Playlist Royale
+Descripción:
+ Aplicación web de música social que convierte la creación de playlists en una experiencia interactiva y monetizable. Incluye propinas directas a creadores y recompensas publicadas por usuarios que buscan playlists para ocasiones específicas.
+ Stack: HTML, JavaScript, Firebase (Firestore, Auth, Hosting), Spotify API, YouTube Data API.
+ Links: Repositorio privado/en desarrollo
+ Imagen: 
+
+
+Preferencias de diseño
+Paleta: colores pasteles con predominante naranja moderno.
+
+Tipografía: Inter o Geist (moderna, clara, minimalista).
+
+Modo: Dark mode por defecto, con opción de cambiar a claro.
+
+Idioma: Bilingüe (ES/EN).
+
+
