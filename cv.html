@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV — Carlos Herbey Gámez Gaxiola</title>
+    <meta name="description" content="Currículum de Carlos Herbey Gámez Gaxiola." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css" />
+    <style>
+      /* Print-only rules scoped to this page */
+      @media print {
+        @page { size: A4; margin: 10mm; }
+        html, body { background: #fff !important; color: #000 !important; margin: 0 !important; }
+        body { padding-top: 0 !important; }
+        body::before { display: none !important; }
+        .header, .footer, .cv-header { display: none !important; }
+        .section { padding: 0 !important; }
+        .cv-sheet { border: none; background: #fff; margin: 0 !important; padding-top: 0 !important; }
+        .cv-contact a { color: #000; }
+        .no-print { display: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container header">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="index.html" class="brand-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
+        <div class="controls">
+          <button id="lang-toggle" class="btn ghost" aria-label="Cambiar idioma">ES</button>
+          <button id="theme-toggle" class="btn ghost" aria-label="Cambiar tema">🌙</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container section cv">
+      <div class="cv-header">
+        <h2 data-i18n="sections.cv">CV</h2>
+        <div class="no-print" style="display:flex; gap:8px;">
+          <button id="cv-download" class="btn ghost" data-i18n="cv.download">Descargar PDF</button>
+          <a href="index.html" class="btn ghost" data-i18n="cv.back">Volver</a>
+        </div>
+      </div>
+      <div class="cv-sheet" role="document" aria-label="Currículum Vitae">
+        <header class="cv-title">
+          <h1 class="cv-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</h1>
+          <p class="cv-role" data-i18n="role">Estudiante de Ingeniería de Software y Tecnologías Emergentes</p>
+          <div class="cv-contact">
+            <a href="mailto:carlosherbey4@gmail.com">carlosherbey4@gmail.com</a>
+            <span>·</span>
+            <a href="mailto:carlos.gamez38@gmail.com">carlos.gamez38@gmail.com</a>
+            <span>·</span>
+            <a href="https://github.com/Herbey1" target="_blank" rel="noreferrer noopener">github.com/Herbey1</a>
+            <span>·</span>
+            <a href="https://linkedin.com/in/carlos-herbey-gamez-gaxiola-a1a771287" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+          </div>
+        </header>
+
+        <section class="cv-block">
+          <h3 data-i18n="cv.summary">Resumen</h3>
+          <p data-i18n="bio">Soy estudiante ...</p>
+        </section>
+
+        <section class="cv-block">
+          <h3 data-i18n="cv.personal">Datos personales</h3>
+          <ul class="cv-personal">
+            <li><strong data-i18n="cv.personal_residence_label">Residencia:</strong> <span data-i18n="cv.personal_residence">Tijuana, Baja California, México</span></li>
+            <li><strong data-i18n="cv.personal_birthplace_label">Lugar de nacimiento:</strong> <span data-i18n="cv.personal_birthplace">Tijuana, Baja California, México</span></li>
+            <li><strong data-i18n="cv.personal_age_label">Edad:</strong> <span data-i18n="cv.personal_age_value">22 años</span></li>
+            <li><strong data-i18n="cv.personal_dob_label">Fecha de nacimiento:</strong> <span data-i18n="cv.personal_dob">13 de enero de 2003</span></li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h3 data-i18n="cv.education">Educación</h3>
+          <div class="cv-edu">
+            <div class="cv-edu-item">
+              <div class="cv-edu-header">
+                <strong data-i18n="cv.edu_univ_degree">Ingeniería de Software y Tecnologías Emergentes</strong>
+                <span class="muted"> — <span data-i18n="cv.edu_univ_school">Universidad Autónoma de Baja California — FCQI</span></span>
+              </div>
+              <div class="muted"><span data-i18n="cv.edu_univ_dates">Ago 2021 — Presente</span></div>
+              <ul class="cv-edu-meta">
+                <li data-i18n="cv.edu_univ_semester">Semestre: [actualiza aquí]</li>
+                <li data-i18n="cv.edu_univ_gpa">Promedio: [actualiza aquí]</li>
+                <li data-i18n="cv.edu_univ_grad">Graduación esperada: [actualiza aquí]</li>
+              </ul>
+            </div>
+            <div class="cv-edu-item">
+              <div class="cv-edu-header">
+                <strong data-i18n="cv.edu_hs_school">Centro de Bachillerato Tecnológico Industrial y de Servicios No. 116</strong>
+              </div>
+              <div class="muted"><span data-i18n="cv.edu_hs_dates">2018 — 2021</span></div>
+              <div><span data-i18n="cv.edu_hs_specialty">Especialidad: Mantenimiento Industrial</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-block">
+          <h3 data-i18n="cv.skills">Tecnologías</h3>
+          <div class="cv-skills">
+            <div>
+              <strong data-i18n="cv.skill_languages">Lenguajes</strong>
+              <span data-i18n="cv.list_languages">Lenguaje C, Java, JavaScript, Python, Lenguaje ensamblador (básico)</span>
+            </div>
+            <div>
+              <strong data-i18n="cv.skill_frontend">Frontend</strong>
+              <span data-i18n="cv.list_frontend">HTML, CSS, React</span>
+            </div>
+            <div>
+              <strong data-i18n="cv.skill_backend">Backend</strong>
+              <span data-i18n="cv.list_backend">Node.js, Java</span>
+            </div>
+            <div>
+              <strong data-i18n="cv.skill_db">Bases de datos</strong>
+              <span data-i18n="cv.list_db">MySQL</span>
+            </div>
+            <div>
+              <strong data-i18n="cv.skill_systems">Sistemas y redes</strong>
+              <span data-i18n="cv.list_systems">Windows, Linux (básico), Redes (básico)</span>
+            </div>
+            <div>
+              <strong data-i18n="cv.skill_office">Ofimática</strong>
+              <span data-i18n="cv.list_office">Excel, Word</span>
+            </div>
+            <div>
+              <strong data-i18n="cv.skill_foundations">Fundamentos</strong>
+              <span data-i18n="cv.list_foundations">POO, Requerimientos, Documentación, Administración de proyectos de software, Aplicaciones web, Cómputo en la nube, Emprendimiento de negocios de software, Seguridad de software, Matemáticas discretas, Estadística avanzada, Algoritmos, Inteligencia artificial, Traductores en Java, Conocimientos básicos de electrónica (CBTIS 116)</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="cv-block">
+          <h3 data-i18n="cv.projects">Proyectos seleccionados</h3>
+          <div class="cv-project">
+            <div class="cv-project-title" data-i18n="projects.sgca.title">Sistema de Gestión de Comisiones Académicas (SGCA – UABC)</div>
+            <ul>
+              <li data-i18n="cv.sgca_1">Automatiza solicitudes, aprobaciones y reportes con evidencias.</li>
+              <li data-i18n="cv.sgca_2">Prototipo académico en Java/Swing con MySQL y UML.</li>
+            </ul>
+          </div>
+          <div class="cv-project">
+            <div class="cv-project-title" data-i18n="projects.ecogestor.title">EcoGestor</div>
+            <ul>
+              <li data-i18n="cv.eco_1">Plataforma web para gestión ambiental con sensores IoT (ESP32).</li>
+              <li data-i18n="cv.eco_2">Monitoreo de residuos, gateway de comunicación y app para ciudadanos.</li>
+            </ul>
+          </div>
+          <div class="cv-project">
+            <div class="cv-project-title" data-i18n="projects.memoria.title">Memoria Familiar (en desarrollo)</div>
+            <ul>
+              <li data-i18n="cv.mem_1">App de IA para entrevistar y preservar historias de vida.</li>
+            </ul>
+          </div>
+          <div class="cv-project">
+            <div class="cv-project-title" data-i18n="projects.playlist.title">Playlist Royale</div>
+            <ul>
+              <li data-i18n="cv.play_1">Música social con propinas y recompensas; integra Spotify/YouTube APIs.</li>
+            </ul>
+          </div>
+        </section>
+
+        
+      </div>
+    </main>
+
+    <footer class="container footer no-print">
+      <p class="muted small">© <span id="year"></span> <span data-i18n="name">Carlos Herbey Gámez Gaxiola</span></p>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+  </html>
