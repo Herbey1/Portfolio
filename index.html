@@ -19,8 +19,9 @@
       <button id="nav-toggle" class="btn ghost nav-toggle" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">☰</button>
       <nav class="nav" id="nav-menu" data-open="false">
         <div class="nav-links">
-          <a href="#projects" data-i18n="nav.projects">Proyectos</a>
           <a href="#about" data-i18n="nav.about">Sobre mí</a>
+          <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+          <a href="cv.html" data-i18n="nav.cv">CV</a>
           <a href="#contact" data-i18n="nav.contact">Contacto</a>
         </div>
         <div class="controls">
@@ -36,8 +37,8 @@
           <h1 class="hero-title">
             <span data-i18n="name">Carlos Herbey Gámez Gaxiola</span>
           </h1>
-          <p class="role" data-i18n="role">Estudiante de Ingeniería de Software y Tecnologías Emergentes</p>
-          <p class="tagline" data-i18n="tagline">Explorando el desarrollo frontend y soñando con bases de datos y ciberseguridad</p>
+          <p class="role" data-i18n="role">Ingeniero en Software y Tecnologías Emergentes (En formación)</p>
+          <p class="tagline" data-i18n="tagline">Desarrollo Fullstack y aplicaciones móviles con IA integrada</p>
           <div class="social">
             <a class="chip" href="https://github.com/Herbey1" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.34-1.78-1.34-1.78-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.69.24 2.94.12 3.25.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.63-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5z"/></svg>
@@ -54,7 +55,7 @@
       <section id="about" class="container section">
         <h2 data-i18n="sections.about">Sobre mí</h2>
         <p data-i18n="bio">
-          Soy estudiante de la Universidad Autónoma de Baja California en la Facultad de Ciencias Químicas e Ingeniería. Me apasiona la programación, especialmente el desarrollo frontend, aunque también me interesa aprender más sobre bases de datos y ciberseguridad. Me gusta probar cosas nuevas, practicar voleibol y, en mis ratos libres, disfruto dibujar y pintar.
+          Estudiante de 8vo semestre de Ingeniería en Software con enfoque en el desarrollo de soluciones escalables y tecnologías emergentes. Experiencia sólida en el desarrollo Fullstack (React/Node.js) y aplicaciones móviles con IA integrada. Dominio de metodologías ágiles (Scrum), contenedores (Docker) y servicios de nube (AWS). Busco aplicar mis conocimientos técnicos en un entorno profesional para contribuir al éxito de proyectos innovadores.
         </p>
       </section>
 
@@ -65,13 +66,14 @@
           <article class="card">
             <div class="carousel" data-alt="SGCA – UABC" data-images='["assets/img/sgca-1.png","assets/img/sgca-2.png","assets/img/sgca-3.png"]'></div>
             <div class="card-body">
-              <h3 data-i18n="projects.sgca.title">Sistema de Gestión de Comisiones Académicas (SGCA – UABC)</h3>
-              <p class="muted" data-i18n="projects.sgca.desc">Aplicación para automatizar y optimizar comisiones académicas en FCQI UABC.</p>
+              <h3 data-i18n="projects.sgca.title">Sistema de Gestión de Comisiones Académicas (Fullstack)</h3>
+              <p class="muted" data-i18n="projects.sgca.desc">Desarrollado para la Facultad de Ingeniería de la UABC. Automaticé el proceso de solicitudes de comisiones para profesores y directivos, mejorando la organización administrativa.</p>
               <div class="stack">
-                <span class="tag">Java</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">UML</span>
-                <span class="tag">Swing</span>
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Prisma</span>
+                <span class="tag">Docker</span>
               </div>
               <div class="links">
                 <a class="btn" href="https://github.com/Herbey1/ServicioP2" target="_blank" rel="noreferrer noopener">GitHub</a>
@@ -98,18 +100,21 @@
             </div>
           </article>
 
-          <!-- Memoria Familiar -->
+          <!-- Memor.IA -->
           <article class="card">
             <div class="cover ai-cover">
-              <img src="assets/img/ai.svg" alt="Ilustración de IA para Memoria Familiar" class="ai-icon" />
+              <img src="assets/img/ai.svg" alt="Ilustración de IA para Memor.IA" class="ai-icon" />
             </div>
             <div class="card-body">
-              <h3 data-i18n="projects.memoria.title">Memoria Familiar (en desarrollo)</h3>
-              <p class="muted" data-i18n="projects.memoria.desc">App de IA para preservar historias de vida familiares.</p>
+              <h3 data-i18n="projects.memoria.title">Memor.IA (Mobile & AI)</h3>
+              <p class="muted" data-i18n="projects.memoria.desc">Aplicación Android enfocada en adultos mayores y conexión familiar. Diseñé un entrevistador virtual con IA que recopila historias familiares mediante voz para preservar el legado emocional.</p>
               <div class="stack">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
+                <span class="tag">React Native</span>
+                <span class="tag">Expo</span>
+                <span class="tag">AWS Amplify</span>
+                <span class="tag">Lambda</span>
                 <span class="tag">OpenAI API</span>
+                <span class="tag">Speech-to-Text</span>
               </div>
               <div class="links">
                 <span class="badge" data-i18n="labels.in_progress">En desarrollo</span>
