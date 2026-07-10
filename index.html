@@ -4,159 +4,671 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Carlos Herbey Gámez Gaxiola | Portafolio</title>
-    <meta name="description" content="Portafolio de Carlos Herbey Gámez Gaxiola: proyectos, bio y enlaces." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Ingeniero en Software Junior · recién egresado UABC. Fullstack, mobile e IA. Portafolio de Carlos Herbey Gámez Gaxiola (HG)."
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <meta name="author" content="Carlos Herbey Gámez Gaxiola" />
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Carlos Herbey Gámez Gaxiola | Portafolio" />
+    <meta
+      property="og:description"
+      content="Ingeniero en Software Junior. Fullstack, mobile e IA. Prácticas en IAMIA · UABC."
+    />
+    <meta property="og:image" content="assets/img/memorin_memoria.png" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Carlos Herbey Gámez Gaxiola | Portafolio" />
+    <meta
+      name="twitter:description"
+      content="Ingeniero en Software Junior. Fullstack, mobile e IA."
+    />
+    <meta name="twitter:image" content="assets/img/memorin_memoria.png" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="container header">
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <a href="#" class="brand-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</a>
+    <div class="page-bg" aria-hidden="true"></div>
+    <div
+      id="scroll-progress"
+      class="scroll-progress"
+      role="progressbar"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      data-i18n-aria="ui.scroll_progress"
+      aria-label="Progreso de lectura"
+    ></div>
+
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="#top" aria-label="Home">
+          <span class="brand-mark" data-i18n="monogram">HG</span>
+          <span class="brand-text" data-i18n="name_short">Herbey Gámez</span>
+        </a>
+
+        <button
+          type="button"
+          id="nav-toggle"
+          class="icon-btn nav-toggle"
+          aria-controls="nav-panel"
+          aria-expanded="false"
+          data-i18n-aria="a11y.open_menu"
+        >
+          <span data-menu-icon aria-hidden="true">☰</span>
+        </button>
+
+        <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+        <div id="nav-panel" class="nav-panel">
+          <nav class="nav-links" data-nav-label aria-label="Navegación principal">
+            <a href="#about" data-i18n="nav.about">Sobre mí</a>
+            <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+            <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+            <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+            <a href="#education" data-i18n="nav.education">Educación</a>
+            <a href="#contact" data-i18n="nav.contact">Contacto</a>
+          </nav>
+
+          <div class="header-actions">
+            <button
+              type="button"
+              class="icon-btn"
+              data-lang-toggle
+              aria-label="Cambiar idioma"
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              class="icon-btn"
+              data-theme-toggle
+              aria-pressed="true"
+              aria-label="Cambiar tema"
+            >
+              <span data-theme-icon aria-hidden="true">☾</span>
+            </button>
+            <a class="btn btn-sm btn-accent" href="cv.html" data-i18n="nav.resume">CV</a>
+          </div>
+        </div>
       </div>
-      <button id="nav-toggle" class="btn ghost nav-toggle" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">☰</button>
-      <nav class="nav" id="nav-menu" data-open="false">
-        <div class="nav-links">
-          <a href="#about" data-i18n="nav.about">Sobre mí</a>
-          <a href="#projects" data-i18n="nav.projects">Proyectos</a>
-          <a href="cv.html" data-i18n="nav.cv">CV</a>
-          <a href="#contact" data-i18n="nav.contact">Contacto</a>
-        </div>
-        <div class="controls">
-          <button id="lang-toggle" class="btn ghost" aria-label="Cambiar idioma">ES</button>
-          <button id="theme-toggle" class="btn ghost" aria-label="Cambiar tema">🌙</button>
-        </div>
-      </nav>
     </header>
 
-    <main>
-      <section class="hero container">
-        <div class="hero-text">
-          <h1 class="hero-title">
-            <span data-i18n="name">Carlos Herbey Gámez Gaxiola</span>
-          </h1>
-          <p class="role" data-i18n="role">Ingeniero en Software y Tecnologías Emergentes (En formación)</p>
-          <p class="tagline" data-i18n="tagline">Desarrollo Fullstack y aplicaciones móviles con IA integrada</p>
-          <div class="social">
-            <a class="chip" href="https://github.com/Herbey1" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.34-1.78-1.34-1.78-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.69.24 2.94.12 3.25.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.63-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5z"/></svg>
-              <span>github.com/Herbey1</span>
-            </a>
-            <a class="chip" href="https://linkedin.com/in/carlos-herbey-gamez-gaxiola-a1a771287" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.5c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.7-2.5 3.45V23h-4V8.5z"/></svg>
-              <span>LinkedIn</span>
-            </a>
+    <main id="main">
+      <!-- HERO -->
+      <section id="top" class="hero container">
+        <div class="hero-grid">
+          <div class="hero-copy" data-reveal>
+            <div class="hero-meta">
+              <span class="status-pill">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span data-i18n="availability">Busco rol Junior</span>
+              </span>
+              <span class="meta-sep" aria-hidden="true">·</span>
+              <span class="muted" data-i18n="location_short">Tijuana, BC · Remoto / híbrido</span>
+            </div>
+
+            <p class="hero-greeting muted">
+              <span data-i18n="name">Carlos Herbey Gámez Gaxiola</span>
+            </p>
+            <h1 class="hero-title" data-i18n="role">Ingeniero en Software · Junior</h1>
+            <p class="hero-tagline" data-i18n="tagline">
+              Recién egresado · Fullstack · Mobile · IA
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-accent" href="#projects" data-i18n="cta.projects">Ver proyectos</a>
+              <a class="btn btn-ghost" href="cv.html" data-i18n="cta.resume">Ver CV</a>
+              <a class="btn btn-ghost" href="#contact" data-i18n="cta.contact">Contactar</a>
+            </div>
+
+            <ul class="social-row" data-i18n-aria="a11y.social">
+              <li>
+                <a
+                  class="social-link"
+                  href="https://github.com/Herbey1"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="GitHub"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.41-1.34-1.78-1.34-1.78-1.09-.75.08-.74.08-.74 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.48.99.11-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.25 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.69.24 2.94.12 3.25.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.63-5.48 5.94.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5z"
+                    />
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="social-link"
+                  href="https://linkedin.com/in/carlos-herbey-gamez-gaxiola-a1a771287"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="LinkedIn"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.8v2h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.5c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.7-2.5 3.45V23h-4V8.5z"
+                    />
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a class="social-link" href="mailto:carlosherbey4@gmail.com" aria-label="Email">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                  <span>Email</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel" aria-hidden="true" data-reveal data-reveal-delay="80">
+            <div class="hero-panel-inner">
+              <div class="hero-stat">
+                <span class="hero-stat-value">4+</span>
+                <span class="hero-stat-label" data-i18n="hero_stats.projects">Proyectos</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">FS</span>
+                <span class="hero-stat-label" data-i18n="hero_stats.fullstack">Fullstack</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">AI</span>
+                <span class="hero-stat-label" data-i18n="hero_stats.mobile_ai">Mobile + IA</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">2026</span>
+                <span class="hero-stat-label" data-i18n="hero_stats.graduate">Egresado 2026</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section container">
+        <header class="section-head" data-reveal>
+          <span class="section-num" data-i18n="sections.about_num">01</span>
+          <h2 data-i18n="sections.about">Sobre mí</h2>
+        </header>
+        <div class="about-layout" data-reveal>
+          <p class="lead" data-i18n="bio">
+            Ingeniero en Software y Tecnologías Emergentes recién egresado de la UABC (FCQI). Busco
+            mi primer rol Junior para aportar en equipos de producto. Experiencia en prácticas
+            remotas en IAMIA (Careflow): QA de bots conversacionales multitenant, automatización por
+            WhatsApp, Supabase y optimización de prompts/IA. Base sólida en fullstack
+            (React/Node.js), mobile, Docker y AWS. Motivado por aprender rápido, medir resultados y
+            entregar con calidad.
+          </p>
+          <div class="highlight-grid">
+            <article class="highlight-card">
+              <h3 data-i18n="about_highlights.h1_title">Fullstack</h3>
+              <p class="muted" data-i18n="about_highlights.h1_desc">
+                APIs, bases de datos y frontends modernos
+              </p>
+            </article>
+            <article class="highlight-card">
+              <h3 data-i18n="about_highlights.h2_title">Mobile & IA</h3>
+              <p class="muted" data-i18n="about_highlights.h2_desc">
+                React Native, voz y modelos generativos
+              </p>
+            </article>
+            <article class="highlight-card">
+              <h3 data-i18n="about_highlights.h3_title">Cloud & DevOps</h3>
+              <p class="muted" data-i18n="about_highlights.h3_desc">
+                AWS, Docker y flujos de entrega
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="about" class="container section">
-        <h2 data-i18n="sections.about">Sobre mí</h2>
-        <p data-i18n="bio">
-          Estudiante de 8vo semestre de Ingeniería en Software con enfoque en el desarrollo de soluciones escalables y tecnologías emergentes. Experiencia sólida en el desarrollo Fullstack (React/Node.js) y aplicaciones móviles con IA integrada. Dominio de metodologías ágiles (Scrum), contenedores (Docker) y servicios de nube (AWS). Busco aplicar mis conocimientos técnicos en un entorno profesional para contribuir al éxito de proyectos innovadores.
-        </p>
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section container">
+        <header class="section-head" data-reveal>
+          <span class="section-num" data-i18n="sections.experience_num">02</span>
+          <h2 data-i18n="sections.experience">Experiencia</h2>
+        </header>
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-dates" data-i18n="experience.iamia_dates"
+                  >Ene 2026 — Jun 2026</span
+                >
+                <span class="badge badge-accent" data-i18n="experience.iamia_mode">Remoto</span>
+              </div>
+              <h3 data-i18n="experience.iamia_role">Practicante — Automatizaciones & QA</h3>
+              <p class="muted exp-company">
+                <span data-i18n="experience.iamia_company">IAMIA · Careflow</span>
+                <span aria-hidden="true"> · </span>
+                <span data-i18n="experience.iamia_program"
+                  >PVVC · Proyecto de automatizaciones</span
+                >
+              </p>
+              <ul class="exp-bullets">
+                <li data-i18n="experience.iamia_1">
+                  QA estructurado de bots conversacionales multitenant en Careflow (consultorios
+                  médicos): validación de knowledge base y flujos de agendamiento (crear, cancelar,
+                  reagendar) vía WhatsApp Business.
+                </li>
+                <li data-i18n="experience.iamia_2">
+                  Detecté y documenté bugs por severidad (horarios, precios, reglas de cliente);
+                  implementé correcciones en prompts y knowledge base y verifiqué estabilidad con
+                  pruebas de regresión en producción.
+                </li>
+                <li data-i18n="experience.iamia_3">
+                  Investigación de limitación técnica en GoHighLevel (mensajes en ráfaga de
+                  WhatsApp): ticket de soporte con propuesta de solución, delays y lógica de
+                  concatenación en workflows.
+                </li>
+                <li data-i18n="experience.iamia_4">
+                  Análisis de métricas de automatización y minería de conversaciones en Supabase
+                  (SQL): tasas de resolución autónoma vs. derivación a humano y optimización de
+                  criterios de escalamiento.
+                </li>
+                <li data-i18n="experience.iamia_5">
+                  Estandaricé la metodología de QA en guías reutilizables (knowledge + agendamiento)
+                  aplicadas a nuevos tenants en pre-entrega y producción. Stack: GHL, Supabase,
+                  Slack, Claude AI, WhatsApp API.
+                </li>
+              </ul>
+              <ul class="tag-list exp-tags">
+                <li>GoHighLevel</li>
+                <li>Supabase</li>
+                <li>WhatsApp API</li>
+                <li>Claude AI</li>
+                <li>QA</li>
+                <li>SQL</li>
+                <li>Multitenant</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
       </section>
 
-      <section id="projects" class="container section">
-        <h2 data-i18n="sections.projects">Proyectos</h2>
-        <div class="grid">
-          <!-- SGCA -->
-          <article class="card">
-            <div class="carousel" data-alt="SGCA – UABC" data-images='["assets/img/sgca-1.png","assets/img/sgca-2.png","assets/img/sgca-3.png"]'></div>
-            <div class="card-body">
-              <h3 data-i18n="projects.sgca.title">Sistema de Gestión de Comisiones Académicas (Fullstack)</h3>
-              <p class="muted" data-i18n="projects.sgca.desc">Desarrollado para la Facultad de Ingeniería de la UABC. Automaticé el proceso de solicitudes de comisiones para profesores y directivos, mejorando la organización administrativa.</p>
-              <div class="stack">
-                <span class="tag">React</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Prisma</span>
-                <span class="tag">Docker</span>
+      <!-- SKILLS -->
+      <section id="skills" class="section container">
+        <header class="section-head" data-reveal>
+          <span class="section-num" data-i18n="sections.skills_num">03</span>
+          <h2 data-i18n="sections.skills">Habilidades</h2>
+        </header>
+        <div class="skills-grid">
+          <article class="skill-card" data-reveal data-reveal-delay="0">
+            <h3 data-i18n="skills.frontend">Frontend</h3>
+            <ul class="tag-list">
+              <li>React</li>
+              <li>React Native</li>
+              <li>Expo</li>
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </article>
+          <article class="skill-card" data-reveal data-reveal-delay="60">
+            <h3 data-i18n="skills.backend">Backend & datos</h3>
+            <ul class="tag-list">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>Prisma</li>
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>REST API</li>
+            </ul>
+          </article>
+          <article class="skill-card" data-reveal data-reveal-delay="120">
+            <h3 data-i18n="skills.cloud">Cloud & DevOps</h3>
+            <ul class="tag-list">
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Firebase</li>
+              <li>Vercel</li>
+            </ul>
+          </article>
+          <article class="skill-card" data-reveal data-reveal-delay="180">
+            <h3 data-i18n="skills.ai">IA & emergentes</h3>
+            <ul class="tag-list">
+              <li>OpenAI API</li>
+              <li>Claude AI</li>
+              <li>Bots conversacionales</li>
+              <li>Speech-to-Text</li>
+              <li>IoT / ESP32</li>
+            </ul>
+          </article>
+          <article class="skill-card" data-reveal data-reveal-delay="200">
+            <h3 data-i18n="resume.skill_automation">Automatización & CRM</h3>
+            <ul class="tag-list">
+              <li>GoHighLevel</li>
+              <li>Supabase</li>
+              <li>WhatsApp Business</li>
+              <li>Slack</li>
+              <li>QA / Regresión</li>
+              <li>SQL</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section container">
+        <header class="section-head" data-reveal>
+          <span class="section-num" data-i18n="sections.projects_num">04</span>
+          <h2 data-i18n="sections.projects">Proyectos destacados</h2>
+        </header>
+
+        <div class="project-list">
+          <!-- 1. SGCA (featured) -->
+          <article class="project-card project-card--featured" data-reveal>
+            <div
+              class="project-media"
+              data-carousel
+              data-alt="SGCA"
+              data-images='["assets/img/sgca-1.jpg","assets/img/sgca-2.png","assets/img/sgca-3.png"]'
+            ></div>
+            <div class="project-body">
+              <div class="project-top">
+                <div class="project-sub-row">
+                  <p class="project-sub" data-i18n="projects.sgca.subtitle">UABC · Fullstack</p>
+                  <span class="badge badge-accent" data-i18n="labels.featured">Destacado</span>
+                </div>
+                <h3 data-i18n="projects.sgca.title">
+                  Sistema de Gestión de Comisiones Académicas
+                </h3>
               </div>
-              <div class="links">
-                <a class="btn" href="https://github.com/Herbey1/ServicioP2" target="_blank" rel="noreferrer noopener">GitHub</a>
+              <p class="muted" data-i18n="projects.sgca.desc">
+                Automatización de solicitudes de comisiones para profesores y directivos de la
+                Facultad de Ingeniería. Autenticación JWT y arquitectura con Docker Compose.
+              </p>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>Prisma</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  class="btn btn-sm btn-accent"
+                  href="https://github.com/Herbey1/ServicioP2"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  data-i18n="labels.code"
+                  >Código</a
+                >
               </div>
             </div>
           </article>
 
-          <!-- EcoGestor -->
-          <article class="card">
-            <div class="carousel" data-alt="EcoGestor" data-images='["assets/img/ecogestor-1.png","assets/img/ecogestor-2.png","assets/img/ecogestor-3.png","assets/img/ecogestor-4.png"]'></div>
-            <div class="card-body">
-              <h3 data-i18n="projects.ecogestor.title">EcoGestor</h3>
-              <p class="muted" data-i18n="projects.ecogestor.desc">Plataforma web para gestión ambiental con sensores IoT.</p>
-              <div class="stack">
-                <span class="tag">React</span>
-                <span class="tag">Tailwind</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">ESP32</span>
-              </div>
-              <div class="links">
-                <a class="btn" href="https://github.com/Herbey1/EcoGestor" target="_blank" rel="noreferrer noopener">GitHub</a>
-                <a class="btn ghost" href="https://eco-gestor-4nsh5oejd-carlos-herbeys-projects.vercel.app/" target="_blank" rel="noreferrer noopener" data-i18n="labels.live">Live</a>
-              </div>
+          <!-- 2. Memor.IA (featured) -->
+          <article class="project-card project-card--featured" data-reveal>
+            <div class="project-media">
+              <img
+                class="media-img"
+                src="assets/img/memorin_memoria.png"
+                alt="Memor.IA — captura de la aplicación"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-          </article>
-
-          <!-- Memor.IA -->
-          <article class="card">
-            <div class="cover ai-cover">
-              <img src="assets/img/ai.svg" alt="Ilustración de IA para Memor.IA" class="ai-icon" />
-            </div>
-            <div class="card-body">
-              <h3 data-i18n="projects.memoria.title">Memor.IA (Mobile & AI)</h3>
-              <p class="muted" data-i18n="projects.memoria.desc">Aplicación Android enfocada en adultos mayores y conexión familiar. Diseñé un entrevistador virtual con IA que recopila historias familiares mediante voz para preservar el legado emocional.</p>
-              <div class="stack">
-                <span class="tag">React Native</span>
-                <span class="tag">Expo</span>
-                <span class="tag">AWS Amplify</span>
-                <span class="tag">Lambda</span>
-                <span class="tag">OpenAI API</span>
-                <span class="tag">Speech-to-Text</span>
+            <div class="project-body">
+              <div class="project-top">
+                <div class="project-sub-row">
+                  <p class="project-sub" data-i18n="projects.memoria.subtitle">Mobile · IA</p>
+                  <span class="badge badge-accent" data-i18n="labels.featured">Destacado</span>
+                </div>
+                <h3 data-i18n="projects.memoria.title">Memor.IA</h3>
               </div>
-              <div class="links">
+              <p class="muted" data-i18n="projects.memoria.desc">
+                App Android para adultos mayores: entrevistador virtual con IA que captura historias
+                familiares por voz y preserva el legado emocional.
+              </p>
+              <ul class="tag-list">
+                <li>React Native</li>
+                <li>Expo</li>
+                <li>AWS</li>
+                <li>OpenAI</li>
+                <li>Speech-to-Text</li>
+              </ul>
+              <div class="project-links">
                 <span class="badge" data-i18n="labels.in_progress">En desarrollo</span>
               </div>
             </div>
           </article>
 
-          <!-- Playlist Royale -->
-          <article class="card">
-            <div class="carousel" data-alt="Playlist Royale" data-images='["assets/img/playlist-royale-1.png"]'></div>
-            <div class="card-body">
-              <h3 data-i18n="projects.playlist.title">Playlist Royale</h3>
-              <p class="muted" data-i18n="projects.playlist.desc">App de música social con recompensas y propinas.</p>
-              <div class="stack">
-                <span class="tag">HTML</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">Firebase</span>
-                <span class="tag">Spotify API</span>
-                <span class="tag">YouTube API</span>
+          <!-- 3. EcoGestor -->
+          <article class="project-card" data-reveal>
+            <div
+              class="project-media"
+              data-carousel
+              data-alt="EcoGestor"
+              data-images='["assets/img/ecogestor-1.jpg","assets/img/ecogestor-2.jpg","assets/img/ecogestor-3.jpg","assets/img/ecogestor-4.png"]'
+            ></div>
+            <div class="project-body">
+              <div class="project-top">
+                <p class="project-sub" data-i18n="projects.ecogestor.subtitle">IoT · Web</p>
+                <h3 data-i18n="projects.ecogestor.title">EcoGestor</h3>
               </div>
-              <div class="links">
-                <span class="badge" data-i18n="labels.private">Repositorio privado</span>
+              <p class="muted" data-i18n="projects.ecogestor.desc">
+                Plataforma de gestión ambiental con sensores ESP32: monitoreo de residuos, gateway
+                de comunicación y participación ciudadana.
+              </p>
+              <ul class="tag-list">
+                <li>React</li>
+                <li>Tailwind</li>
+                <li>Node.js</li>
+                <li>ESP32</li>
+              </ul>
+              <div class="project-links">
+                <a
+                  class="btn btn-sm btn-accent"
+                  href="https://github.com/Herbey1/EcoGestor"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  data-i18n="labels.code"
+                  >Código</a
+                >
+                <a
+                  class="btn btn-sm btn-ghost"
+                  href="https://eco-gestor-4nsh5oejd-carlos-herbeys-projects.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  data-i18n="labels.live"
+                  >Demo</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Playlist Royale -->
+          <article class="project-card" data-reveal>
+            <div
+              class="project-media"
+              data-carousel
+              data-alt="Playlist Royale"
+              data-images='["assets/img/playlist-royale-1.jpg"]'
+            ></div>
+            <div class="project-body">
+              <div class="project-top">
+                <p class="project-sub" data-i18n="projects.playlist.subtitle">Web · Social</p>
+                <h3 data-i18n="projects.playlist.title">Playlist Royale</h3>
+              </div>
+              <p class="muted" data-i18n="projects.playlist.desc">
+                Experiencia de música social con playlists interactivas, propinas a creadores y
+                recompensas, integrada con Spotify y YouTube.
+              </p>
+              <ul class="tag-list">
+                <li>JavaScript</li>
+                <li>Firebase</li>
+                <li>Spotify API</li>
+                <li>YouTube API</li>
+              </ul>
+              <div class="project-links">
+                <span class="badge" data-i18n="labels.private">Privado</span>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="container section">
-        <h2 data-i18n="sections.contact">Contacto</h2>
-        <div class="contact-grid">
-          <a class="chip" href="mailto:carlosherbey4@gmail.com">carlosherbey4@gmail.com</a>
-          <a class="chip" href="mailto:carlos.gamez38@gmail.com">carlos.gamez38@gmail.com</a>
+      <!-- EDUCATION -->
+      <section id="education" class="section container">
+        <header class="section-head" data-reveal>
+          <span class="section-num" data-i18n="sections.education_num">05</span>
+          <h2 data-i18n="sections.education">Educación</h2>
+        </header>
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-dates" data-i18n="education.dates">2021 — 2026</span>
+                <span class="badge badge-accent" data-i18n="education.status"
+                  >Graduado · Mayo 2026</span
+                >
+              </div>
+              <h3 data-i18n="education.degree">
+                Ingeniería de Software y Tecnologías Emergentes
+              </h3>
+              <p class="muted" data-i18n="education.school">
+                Universidad Autónoma de Baja California — FCQI
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item" data-reveal data-reveal-delay="80">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-dates" data-i18n="education.hs_dates">2018 — 2021</span>
+              </div>
+              <h3 data-i18n="education.hs_school">CBTIS No. 116</h3>
+              <p class="muted" data-i18n="education.hs_specialty">Mantenimiento Industrial</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section container">
+        <header class="section-head" data-reveal>
+          <span class="section-num" data-i18n="sections.contact_num">06</span>
+          <h2 data-i18n="sections.contact">Contacto</h2>
+        </header>
+        <div class="contact-panel" data-reveal>
+          <div class="contact-copy">
+            <h3 data-i18n="contact.title">¿Trabajamos juntos?</h3>
+            <p class="muted" data-i18n="contact.lead">
+              Recién egresado buscando mi primer rol Junior (desarrollo de software). Abierto a
+              remoto, híbrido o presencial en Tijuana / BC.
+            </p>
+            <p class="contact-loc muted" data-i18n="location_full">
+              Tijuana, Baja California, México
+            </p>
+          </div>
+          <div class="contact-actions">
+            <div class="contact-card-wrap">
+              <a class="contact-card" href="mailto:carlosherbey4@gmail.com">
+                <span class="contact-label" data-i18n="contact.email_primary">Email principal</span>
+                <span class="contact-value">carlosherbey4@gmail.com</span>
+              </a>
+              <button
+                type="button"
+                class="btn btn-sm btn-ghost copy-btn"
+                data-copy-email="carlosherbey4@gmail.com"
+                data-i18n="contact.copy"
+              >
+                Copiar
+              </button>
+            </div>
+            <div class="contact-card-wrap">
+              <a class="contact-card" href="mailto:carlos.gamez38@gmail.com">
+                <span class="contact-label" data-i18n="contact.email_secondary"
+                  >Email alternativo</span
+                >
+                <span class="contact-value">carlos.gamez38@gmail.com</span>
+              </a>
+              <button
+                type="button"
+                class="btn btn-sm btn-ghost copy-btn"
+                data-copy-email="carlos.gamez38@gmail.com"
+                data-i18n="contact.copy"
+              >
+                Copiar
+              </button>
+            </div>
+            <div class="contact-row">
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Herbey1"
+                target="_blank"
+                rel="noreferrer noopener"
+                data-i18n="cta.github"
+                >GitHub</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://linkedin.com/in/carlos-herbey-gamez-gaxiola-a1a771287"
+                target="_blank"
+                rel="noreferrer noopener"
+                data-i18n="cta.linkedin"
+                >LinkedIn</a
+              >
+              <a class="btn btn-accent" href="cv.html" data-i18n="cta.resume">Ver CV</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="container footer">
-      <p class="muted">© <span id="year"></span> <span data-i18n="name">Carlos Herbey Gámez Gaxiola</span></p>
-      <p class="muted small" data-i18n="credits">Diseño pastel con acento naranja. Dark mode por defecto.</p>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark sm" data-i18n="monogram">HG</span>
+          <div>
+            <p class="footer-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</p>
+            <p class="muted small">
+              <span data-i18n="footer.built">Diseñado y desarrollado por</span>
+              <span data-i18n="name_short">Herbey Gámez</span>
+              · <span data-year></span>
+            </p>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#about" data-i18n="nav.about">Sobre mí</a>
+          <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+          <a href="cv.html" data-i18n="nav.resume">CV</a>
+          <a href="#contact" data-i18n="nav.contact">Contacto</a>
+        </nav>
+      </div>
     </footer>
+
+    <button
+      type="button"
+      id="back-to-top"
+      class="back-to-top"
+      data-i18n-aria="a11y.back_top"
+      aria-label="Volver arriba"
+    >
+      <span aria-hidden="true">↑</span>
+    </button>
 
     <script src="assets/app.js"></script>
   </body>
-  </html>
+</html>

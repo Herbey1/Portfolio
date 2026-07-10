@@ -4,195 +4,273 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CV — Carlos Herbey Gámez Gaxiola</title>
-    <meta name="description" content="Currículum de Carlos Herbey Gámez Gaxiola." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="CV Junior — Carlos Herbey Gámez Gaxiola. Ingeniero en Software, prácticas IAMIA, proyectos fullstack e IA."
+    />
+    <meta name="theme-color" content="#0f1419" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/styles.css" />
-    <style>
-      /* Print-only rules scoped to this page */
-      @media print {
-        @page { size: A4; margin: 10mm; }
-        html, body { background: #fff !important; color: #000 !important; margin: 0 !important; }
-        body { padding-top: 0 !important; }
-        body::before { display: none !important; }
-        .header, .footer, .cv-header { display: none !important; }
-        .section { padding: 0 !important; }
-        .cv-sheet { border: none; background: #fff; margin: 0 !important; padding-top: 0 !important; }
-        .cv-contact a { color: #000; }
-        .no-print { display: none !important; }
-      }
-    </style>
   </head>
-  <body>
-    <header class="container header">
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <a href="index.html" class="brand-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</a>
+  <body class="page-resume">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header no-print">
+      <div class="header-inner container">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" data-i18n="monogram">HG</span>
+          <span class="brand-text" data-i18n="name_short">Herbey Gámez</span>
+        </a>
+
+        <button
+          type="button"
+          id="nav-toggle"
+          class="icon-btn nav-toggle"
+          aria-controls="nav-panel"
+          aria-expanded="false"
+          data-i18n-aria="a11y.open_menu"
+        >
+          <span data-menu-icon aria-hidden="true">☰</span>
+        </button>
+
+        <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+        <div id="nav-panel" class="nav-panel">
+          <nav class="nav-links" data-nav-label aria-label="Navegación principal">
+            <a href="index.html#about" data-i18n="nav.about">Sobre mí</a>
+            <a href="index.html#experience" data-i18n="nav.experience">Experiencia</a>
+            <a href="index.html#skills" data-i18n="nav.skills">Habilidades</a>
+            <a href="index.html#projects" data-i18n="nav.projects">Proyectos</a>
+            <a href="index.html#education" data-i18n="nav.education">Educación</a>
+            <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
+          </nav>
+
+          <div class="header-actions">
+            <button type="button" class="icon-btn" data-lang-toggle aria-label="Cambiar idioma">
+              ES
+            </button>
+            <button
+              type="button"
+              class="icon-btn"
+              data-theme-toggle
+              aria-pressed="true"
+              aria-label="Cambiar tema"
+            >
+              <span data-theme-icon aria-hidden="true">☾</span>
+            </button>
+            <a class="btn btn-sm btn-accent is-current" href="cv.html" data-i18n="nav.resume"
+              >CV</a
+            >
+          </div>
+        </div>
       </div>
-      <button id="nav-toggle" class="btn ghost nav-toggle" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">☰</button>
-      <nav class="nav" id="nav-menu" data-open="false">
-        <div class="nav-links">
-          <a href="index.html#about" data-i18n="nav.about">Sobre mí</a>
-          <a href="index.html#projects" data-i18n="nav.projects">Proyectos</a>
-          <a href="cv.html" data-i18n="nav.cv">CV</a>
-          <a href="index.html#contact" data-i18n="nav.contact">Contacto</a>
-        </div>
-        <div class="controls">
-          <button id="lang-toggle" class="btn ghost" aria-label="Cambiar idioma">ES</button>
-          <button id="theme-toggle" class="btn ghost" aria-label="Cambiar tema">🌙</button>
-        </div>
-      </nav>
     </header>
 
-    <main class="container section cv">
-      <div class="cv-header">
-        <h2 data-i18n="sections.cv">CV</h2>
-        <div class="no-print" style="display:flex; gap:8px;">
-          <button id="cv-download" class="btn ghost" data-i18n="cv.download">Descargar PDF</button>
-          <a href="index.html" class="btn ghost" data-i18n="cv.back">Volver</a>
+    <main id="main" class="container section resume-page">
+      <div class="resume-toolbar no-print">
+        <h1 class="resume-page-title" data-i18n="sections.resume">Currículum</h1>
+        <div class="resume-toolbar-actions">
+          <button type="button" id="cv-download" class="btn btn-accent" data-i18n="resume.download">
+            Descargar PDF
+          </button>
+          <a href="index.html" class="btn btn-ghost" data-i18n="resume.back">Volver al portafolio</a>
         </div>
       </div>
-      <div class="cv-sheet" role="document" aria-label="Currículum Vitae">
-        <header class="cv-title">
-          <h1 class="cv-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</h1>
-          <p class="cv-role" data-i18n="role">Ingeniero en Software y Tecnologías Emergentes (En formación)</p>
-          <div class="cv-contact">
+
+      <!-- Compact 1-page resume (screen + print) -->
+      <article class="resume-sheet resume-sheet--compact" role="document" aria-label="Curriculum Vitae">
+        <header class="resume-header">
+          <h2 class="resume-name" data-i18n="name">Carlos Herbey Gámez Gaxiola</h2>
+          <p class="resume-role" data-i18n="role">Ingeniero en Software · Junior</p>
+          <p class="resume-contact-line">
             <a href="mailto:carlosherbey4@gmail.com">carlosherbey4@gmail.com</a>
-            <span>·</span>
-            <a href="mailto:carlos.gamez38@gmail.com">carlos.gamez38@gmail.com</a>
-            <span>·</span>
-            <a href="https://github.com/Herbey1" target="_blank" rel="noreferrer noopener">github.com/Herbey1</a>
-            <span>·</span>
-            <a href="https://linkedin.com/in/carlos-herbey-gamez-gaxiola-a1a771287" target="_blank" rel="noreferrer noopener">LinkedIn</a>
-          </div>
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/Herbey1" target="_blank" rel="noreferrer noopener"
+              >github.com/Herbey1</a
+            >
+            <span aria-hidden="true">·</span>
+            <a
+              href="https://linkedin.com/in/carlos-herbey-gamez-gaxiola-a1a771287"
+              target="_blank"
+              rel="noreferrer noopener"
+              >LinkedIn</a
+            >
+            <span aria-hidden="true">·</span>
+            <span data-i18n="location_short">Tijuana, BC · Remoto / híbrido</span>
+          </p>
         </header>
 
-        <section class="cv-block">
-          <h3 data-i18n="cv.summary">Perfil Profesional</h3>
-          <p data-i18n="bio">Estudiante de 8vo semestre de Ingeniería en Software con enfoque en el desarrollo de soluciones escalables y tecnologías emergentes. Experiencia sólida en el desarrollo Fullstack (React/Node.js) y aplicaciones móviles con IA integrada. Dominio de metodologías ágiles (Scrum), contenedores (Docker) y servicios de nube (AWS). Busco aplicar mis conocimientos técnicos en un entorno profesional para contribuir al éxito de proyectos innovadores.</p>
+        <section class="resume-block">
+          <h3 data-i18n="resume.summary">Perfil profesional</h3>
+          <p data-i18n="bio_cv">
+            Ingeniero en Software recién egresado (UABC). Busco rol Junior. Prácticas remotas en
+            IAMIA/Careflow: QA de bots multitenant, WhatsApp, Supabase y prompts/IA. Fullstack
+            (React/Node.js), mobile, Docker y AWS.
+          </p>
         </section>
 
-        <section class="cv-block">
-          <h3 data-i18n="cv.personal">Datos personales</h3>
-          <ul class="cv-personal">
-            <li><strong data-i18n="cv.personal_residence_label">Residencia:</strong> <span data-i18n="cv.personal_residence">Tijuana, Baja California, México</span></li>
-            <li><strong data-i18n="cv.personal_birthplace_label">Lugar de nacimiento:</strong> <span data-i18n="cv.personal_birthplace">Tijuana, Baja California, México</span></li>
-            <li><strong data-i18n="cv.personal_age_label">Edad:</strong> <span data-i18n="cv.personal_age_value">22 años</span></li>
-            <li><strong data-i18n="cv.personal_dob_label">Fecha de nacimiento:</strong> <span data-i18n="cv.personal_dob">13 de enero de 2003</span></li>
-          </ul>
+        <section class="resume-block">
+          <h3 data-i18n="resume.experience">Experiencia</h3>
+          <div class="resume-edu-item">
+            <div class="resume-edu-head">
+              <strong data-i18n="experience.iamia_role"
+                >Practicante — Automatizaciones & QA</strong
+              >
+              <span class="muted" data-i18n="experience.iamia_dates">Ene 2026 — Jun 2026</span>
+            </div>
+            <p class="muted resume-meta-line">
+              <span data-i18n="experience.iamia_company">IAMIA · Careflow</span>
+              ·
+              <span data-i18n="experience.iamia_mode">Remoto</span>
+              ·
+              <span data-i18n="experience.iamia_program"
+                >PVVC · Proyecto de automatizaciones</span
+              >
+            </p>
+            <ul class="resume-bullets">
+              <li data-i18n="experience.cv_1">
+                QA de bots multitenant en Careflow: knowledge base y agendamiento automatizado
+                (crear/cancelar/reagendar) vía WhatsApp Business.
+              </li>
+              <li data-i18n="experience.cv_2">
+                Documenté e implementé correcciones en prompts y knowledge base; regresión
+                post-despliegue en producción.
+              </li>
+              <li data-i18n="experience.cv_3">
+                Estandaricé metodología QA reutilizable y analizé métricas en Supabase (SQL). Stack:
+                GHL, Supabase, Claude AI, WhatsApp API.
+              </li>
+            </ul>
+          </div>
         </section>
 
-        <section class="cv-block">
-          <h3 data-i18n="cv.education">Educación</h3>
-          <div class="cv-edu">
-            <div class="cv-edu-item">
-              <div class="cv-edu-header">
-                <strong data-i18n="cv.edu_univ_degree">Ingeniería de Software y Tecnologías Emergentes</strong>
-                <span class="muted"> — <span data-i18n="cv.edu_univ_school">Universidad Autónoma de Baja California — FCQI</span></span>
+        <section class="resume-block">
+          <h3 data-i18n="resume.education">Educación</h3>
+          <div class="resume-edu">
+            <div class="resume-edu-item">
+              <div class="resume-edu-head">
+                <strong data-i18n="education.degree"
+                  >Ingeniería de Software y Tecnologías Emergentes</strong
+                >
+                <span class="muted" data-i18n="education.dates">2021 — 2026</span>
               </div>
-              <div class="muted"><span data-i18n="cv.edu_univ_dates">2021 — Mayo 2026</span></div>
-              <ul class="cv-edu-meta">
-                <li data-i18n="cv.edu_univ_semester">Semestre: 8º</li>
-                <li data-i18n="cv.edu_univ_grad">Graduación esperada: Mayo 2026</li>
-              </ul>
+              <p class="muted resume-meta-line">
+                <span data-i18n="education.school"
+                  >Universidad Autónoma de Baja California — FCQI</span
+                >
+                ·
+                <span data-i18n="education.status">Graduado · Mayo 2026</span>
+              </p>
             </div>
-            <div class="cv-edu-item">
-              <div class="cv-edu-header">
-                <strong data-i18n="cv.edu_hs_school">Centro de Bachillerato Tecnológico Industrial y de Servicios No. 116</strong>
+            <div class="resume-edu-item">
+              <div class="resume-edu-head">
+                <strong data-i18n="education.hs_school">CBTIS No. 116</strong>
+                <span class="muted" data-i18n="education.hs_dates">2018 — 2021</span>
               </div>
-              <div class="muted"><span data-i18n="cv.edu_hs_dates">2018 — 2021</span></div>
-              <div><span data-i18n="cv.edu_hs_specialty">Especialidad: Mantenimiento Industrial</span></div>
+              <p class="muted resume-meta-line" data-i18n="education.hs_specialty">
+                Mantenimiento Industrial
+              </p>
             </div>
           </div>
         </section>
 
-        <section class="cv-block">
-          <h3 data-i18n="cv.skills">Habilidades Técnicas</h3>
-          <div class="cv-skills">
-            <div>
-              <strong data-i18n="cv.skill_languages">Lenguajes:</strong>
-              <span data-i18n="cv.list_languages">JavaScript (ES6+), TypeScript, Java, Python, C, Kotlin, R, SQL, JSX</span>
-            </div>
-            <div>
-              <strong data-i18n="cv.skill_frontend">Frontend:</strong>
-              <span data-i18n="cv.list_frontend">React 18, React Native (Expo), Tailwind CSS, React Context API</span>
-            </div>
-            <div>
-              <strong data-i18n="cv.skill_backend">Backend & DB:</strong>
-              <span data-i18n="cv.list_backend">Node.js (Express), Prisma ORM, PostgreSQL, MySQL, REST API</span>
-            </div>
-            <div>
-              <strong data-i18n="cv.skill_cloud">Cloud & DevOps:</strong>
-              <span data-i18n="cv.list_cloud">AWS (Amplify, AppSync, Lambda, S3), Docker & Docker Compose, Git</span>
-            </div>
-            <div>
-              <strong data-i18n="cv.skill_ai">IA & Emergentes:</strong>
-              <span data-i18n="cv.list_ai">Integración de OpenAI API, Google Speech-to-Text, Modelado de datos</span>
-            </div>
-            <div>
-              <strong data-i18n="cv.skill_testing">Herramientas de Testing:</strong>
-              <span data-i18n="cv.list_testing">Vitest, Testing Library</span>
-            </div>
-          </div>
-        </section>
+        <section class="resume-block">
+          <h3 data-i18n="resume.projects">Proyectos seleccionados</h3>
 
-        <section class="cv-block">
-          <h3 data-i18n="cv.projects">Proyectos seleccionados</h3>
-          <div class="cv-project">
-            <div class="cv-project-title" data-i18n="projects.sgca.title">Sistema de Gestión de Comisiones Académicas (Fullstack)</div>
-            <p class="muted" style="margin: 4px 0;">Desarrollado para la Facultad de Ingeniería de la UABC</p>
-            <ul>
-              <li data-i18n="cv.sgca_1">Automaticé el proceso de solicitudes de comisiones para profesores y directivos, mejorando la organización administrativa.</li>
-              <li data-i18n="cv.sgca_2">Stack: React, Node.js, PostgreSQL, Prisma, Docker. Logro: Implementé un sistema de autenticación seguro con JWT y una arquitectura basada en microservicios mediante Docker Compose.</li>
+          <div class="resume-project">
+            <h4 data-i18n="projects.sgca.title">
+              Sistema de Gestión de Comisiones Académicas
+            </h4>
+            <p class="muted small" data-i18n="resume.sgca_context">
+              Facultad de Ingeniería · UABC
+            </p>
+            <ul class="resume-bullets">
+              <li data-i18n="resume.sgca_1">
+                Automatización del proceso de solicitudes de comisiones para profesores y
+                directivos.
+              </li>
+              <li data-i18n="resume.sgca_2">
+                Stack React, Node.js, PostgreSQL, Prisma, Docker. Autenticación JWT y orquestación
+                con Docker Compose.
+              </li>
             </ul>
           </div>
-          <div class="cv-project">
-            <div class="cv-project-title" data-i18n="projects.ecogestor.title">EcoGestor</div>
-            <ul>
-              <li data-i18n="cv.eco_1">Plataforma web para gestión ambiental con sensores IoT (ESP32).</li>
-              <li data-i18n="cv.eco_2">Monitoreo de residuos, gateway de comunicación y app para ciudadanos.</li>
-            </ul>
-          </div>
-          <div class="cv-project">
-            <div class="cv-project-title" data-i18n="projects.memoria.title">Memor.IA (Mobile & AI)</div>
-            <p class="muted" style="margin: 4px 0;">Aplicación Android enfocada en adultos mayores y conexión familiar</p>
-            <ul>
-              <li data-i18n="cv.mem_1">Diseñé un entrevistador virtual con IA que recopila historias familiares mediante voz para preservar el legado emocional. Stack: React Native (Expo), AWS (Amplify/Lambda), OpenAI API. Logro: Integración exitosa de Speech-to-Text y procesamiento de lenguaje natural en un entorno serverless.</li>
-            </ul>
-          </div>
-          <div class="cv-project">
-            <div class="cv-project-title" data-i18n="projects.playlist.title">Playlist Royale</div>
-            <ul>
-              <li data-i18n="cv.play_1">Música social con propinas y recompensas; integra Spotify/YouTube APIs.</li>
+
+          <div class="resume-project">
+            <h4 data-i18n="projects.memoria.title">Memor.IA</h4>
+            <p class="muted small" data-i18n="resume.mem_context">
+              Android · adultos mayores y conexión familiar
+            </p>
+            <ul class="resume-bullets">
+              <li data-i18n="resume.mem_1">
+                Entrevistador virtual con IA por voz. React Native (Expo), AWS Amplify/Lambda,
+                OpenAI. Speech-to-Text en serverless.
+              </li>
             </ul>
           </div>
         </section>
 
-        <section class="cv-block">
-          <h3 data-i18n="cv.certifications">Certificaciones y Cursos</h3>
-          <ul class="cv-personal">
-            <li data-i18n="cv.cert_mendix">Mendix Rapid Developer | Certificación académica UABC</li>
-            <li data-i18n="cv.cert_mooc">Desarrollo de Habilidades Socioemocionales (MOOC)</li>
-            <li data-i18n="cv.cert_doc">Taller de Documentación de Software</li>
-          </ul>
+        <section class="resume-block">
+          <h3 data-i18n="resume.skills">Habilidades técnicas</h3>
+          <p class="resume-skills-compact" data-i18n="resume.list_skills_compact">
+            JavaScript/TypeScript, React, React Native, Node.js, PostgreSQL, Prisma, Docker, AWS,
+            Supabase, GoHighLevel, WhatsApp API, Claude/OpenAI, SQL, QA
+          </p>
         </section>
 
-        <section class="cv-block">
-          <h3 data-i18n="cv.languages">Idiomas</h3>
-          <ul class="cv-personal">
-            <li data-i18n="cv.lang_spanish">Español: Nativo</li>
-            <li data-i18n="cv.lang_english">Inglés: Nivel B1 (Capacidad técnica para lectura de documentación y comunicación básica)</li>
-          </ul>
-        </section>
+        <div class="resume-footer-grid">
+          <section class="resume-block">
+            <h3 data-i18n="resume.languages">Idiomas</h3>
+            <ul class="resume-list">
+              <li data-i18n="resume.lang_spanish">Español — Nativo</li>
+              <li data-i18n="resume.lang_english">
+                Inglés — B2 (lectura técnica y comunicación intermedia)
+              </li>
+            </ul>
+          </section>
 
-      </div>
+          <section class="resume-block">
+            <h3 data-i18n="resume.personal">Datos personales</h3>
+            <ul class="resume-list">
+              <li>
+                <strong data-i18n="resume.residence_label">Residencia</strong>:
+                <span data-i18n="resume.residence">Tijuana, Baja California, México</span>
+              </li>
+              <li>
+                <strong data-i18n="resume.age_label">Edad</strong>:
+                <span data-i18n="resume.age_value">23 años</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="resume-block">
+            <h3 data-i18n="resume.certifications">Certificaciones</h3>
+            <ul class="resume-list">
+              <li data-i18n="resume.cert_mendix">
+                Mendix Rapid Developer · Certificación académica UABC
+              </li>
+            </ul>
+          </section>
+        </div>
+      </article>
     </main>
 
-    <footer class="container footer no-print">
-      <p class="muted small">© <span id="year"></span> <span data-i18n="name">Carlos Herbey Gámez Gaxiola</span></p>
+    <footer class="site-footer no-print">
+      <div class="container footer-inner">
+        <p class="muted small">
+          © <span data-year></span>
+          <span data-i18n="name">Carlos Herbey Gámez Gaxiola</span>
+        </p>
+        <a href="index.html" class="footer-link" data-i18n="resume.back">Volver al portafolio</a>
+      </div>
     </footer>
 
     <script src="assets/app.js"></script>
   </body>
-  </html>
+</html>
